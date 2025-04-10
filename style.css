@@ -1,0 +1,126 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: lightgray;
+    font-family: sans-serif;
+}
+
+h1{
+    text-align: center;
+    justify-content: center;
+    color: black;
+}
+
+.nupud{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+}
+
+.pealeht{
+    max-width: 200px;
+    width: 100%;
+    padding: 3rem;
+    background-color: #4f4f4f;
+    color: white;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    transition: .3s;
+}
+.pealeht:hover{
+    background-color: #3f3f3f;
+    scale: 1.05;
+}
+
+.hero-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    border: 2px solid black;
+    padding: 40px;
+    font-family: sans-serif;
+    font-size: 16px;
+    margin: auto;
+    width: 240px;
+    text-align: center;
+    background-color: grey;
+    border-radius: 20px;
+    transition: .3s;
+}
+.hero-btn:hover{
+    background-color: #3f3f3f;
+    scale: 1.05;
+}
+
+section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+    flex-direction: column;
+    padding: 50px;
+    height: 100vh;
+}
+
+#box{
+    max-width: 600px;
+    width: 100%;
+    padding: 50px;
+    background-color: #f5f5f5;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+#box input{
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #000;
+    border-radius: 10px;
+    max-width: 300px;
+    width: 100%;
+    font-size: 14px;
+    background: transparent;
+}
+
+#box button{
+    padding: 10px;
+    border: 1px solid #000;
+    border-radius: 10px;
+    max-width: 300px;
+    width: 100%;
+    font-size: 14px;
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+    transition: .3s;
+}
+#box button:hover{
+    background-color: #333;
+    scale: 1.05;
+}
+
+#leaderboard{
+    max-width: 600px;
+    width: 100%;
+    padding: 50px;
+    background-color: #f5f5f5;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.5rem;
+}
