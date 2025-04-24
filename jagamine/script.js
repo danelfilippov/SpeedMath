@@ -1,23 +1,40 @@
-function jagamine() {
+let value;
+let value1;
+let answer;
+let button;
+let input;
 
-    const value = Math.round(Math.random() * 10);
-    const value1 = Math.round(Math.random() * 10);
+function generateQuestion() {
+    value = Math.round(Math.random() * 10);
+    value1 = Math.round(Math.random() * 10);
+    answer = value / value1;
+    document.getElementById('vastused').innerHTML = `${value} / ${value1}`;
+    document.getElementById("pizda").value = '';
+    document.getElementById("useroutput").innerHTML = '';
+}
 
-    console.log(value, value1);
+document.addEventListener("DOMContentLoaded", () => {
+    input = document.getElementById("pizda");
+    button = document.getElementById("sisesta");
 
-    const valuesElement = document.getElementById('vastused');
-    if (valuesElement) {
-        valuesElement.innerHTML = value + ' / ' + value1;
-    }
+    document.getElementById("question").addEventListener("click", generateQuestion);
 
-    const answer = value / value1;
-    const userInput = document.getElementById('pizda').valueAsNumber;
-    userInput.addEventListener('click', function() {
+    button.addEventListener("click", () => {
+        const userInput = input.value;
+
         if (userInput == answer) {
             document.getElementById("useroutput").innerHTML = "ÕIGE";
         } else {
             document.getElementById("useroutput").innerHTML = "VALE";
         }
     });
-}
-jagamine()
+
+    setTimeout(() => {
+        button.disabled = true;
+        input.disabled = true;
+
+        alert('AEG ON LÄBI!!!!!!');
+    }, 60000);
+});
+
+generateQuestion();
